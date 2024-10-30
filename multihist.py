@@ -584,7 +584,7 @@ class Histdd(MultiHistBase):
 
         return Histdd.from_histogram(new_hist, bin_edges=new_bin_edges, axis_names=self.axis_names)        
 
-    def slicesum(self, start, stop=None, axis=0):
+    def slicesum(self, start, stop, axis):
         """Slices the histogram along axis, then sums over that slice, returning a d-1 dimensional histogram"""
         return self.slice(start, stop, axis).sum(axis)
 
